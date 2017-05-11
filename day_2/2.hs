@@ -9,7 +9,7 @@ main = do
     print ("The code to the bathroom is: " ++ code)
 
 solveInstruction :: String -> Int -> Int
-solveInstruction (x:"") y = nextNumber x y
+solveInstruction [] y = y
 solveInstruction (x:xs) y = solveInstruction xs $ nextNumber x y
 
 nextNumber :: Char -> Int -> Int
