@@ -9,11 +9,11 @@ main = do
     let readInt = read :: String -> Int
 
     contents <- readFile "4.txt"
-    let rooms = lines $ contents
+    let rooms = lines contents
     let names = map (filter (/='-') . takeWhile notNumber) rooms
     let sectorIDs = map (readInt . take 3 . dropWhile notNumber) rooms
     let checksums = map (take 5 . drop 1 . dropWhile (/='[')) rooms
-    let sectorSum = sum $ map roomValue $ zip3 names sectorIDs checksums
+    let sectorSum = show . sum $ map roomValue $ zip3 names sectorIDs checksums
     print ("Sum of the real room sector IDs is: " ++ sectorSum)
 
 roomValue :: (String, Int, String) -> Int
