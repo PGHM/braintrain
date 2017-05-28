@@ -20,7 +20,7 @@ separateIpParts addresses hypernets ip
     | head ip == '[' = separateIpParts addresses hypernets' ip'
     | otherwise = separateIpParts addresses' hypernets ip''
         where
-            ip' = drop 1 . dropWhile (/=']') . drop 1 $ ip
+            ip' = drop 1 . dropWhile (/=']') $ ip
             ip'' = dropWhile (/='[') ip
             addresses' = (takeWhile (/='[') ip) : addresses
             hypernets' = (takeWhile (/=']') . drop 1 $ ip) : hypernets
