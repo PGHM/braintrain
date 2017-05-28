@@ -30,6 +30,5 @@ listHasAbba = or . map abbaCheck
 abbaCheck :: String -> Bool
 abbaCheck (a : b : c : d : x) 
     | a == d && b == c && a /= b = True
-    | x == "" = False
     | otherwise = abbaCheck $ b : c : d : x
 abbaCheck x = False
