@@ -7,5 +7,7 @@
 			"path": "auth"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
 }
