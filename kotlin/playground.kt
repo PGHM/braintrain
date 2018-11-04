@@ -6,8 +6,8 @@
 const val LIMIT = 10000
 
 fun main() {
-	val fibonacciList = ArrayList<Int>()
-	fibonacciList.add(1)
+    val fibonacciList = ArrayList<Int>()
+    fibonacciList.add(1)
     fibonacciList.add(1)
     println(fibonacci(fibonacciList))
     
