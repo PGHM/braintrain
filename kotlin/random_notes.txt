@@ -1,0 +1,14 @@
+* Kotlin actually has a very nice documentation and if you are experienced developer you should start with that and dive into what it has to offer https://kotlinlang.org/docs/reference/ and of course a online playground to play with the code https://play.kotlinlang.org/
+* Kotlin has data classes to generate Model type of classes easily https://kotlinlang.org/docs/reference/data-classes.html
+* Kotlin has tail recursion optimization https://kotlinlang.org/docs/reference/functions.html#tail-recursive-functions
+* With Kotlin you can put primary constructor right into class declaration to be more concise and you can have multiple init blocks in addition to that and secondary constructors https://kotlinlang.org/docs/reference/classes.html
+* Like in Swift you can do class extension pretty easily, with even less the code that in Swift https://kotlinlang.org/docs/reference/extensions.html
+* Unlike Swift you can actually still have backing field to properties with custom setter or getter https://kotlinlang.org/docs/reference/properties.html#backing-fields
+* Eveyrthing in Kotlin is final by default, so if you want to allow overriding you have to specify it explicitly 
+* Notes about where and how to put constants in Kotlin, worth a read https://blog.egorand.me/where-do-i-put-my-constants-in-kotlin/
+* There is no ternary operators (there is the Elvis :? operator though) but you can use if-else on a single line https://kotlinlang.org/docs/reference/control-flow.html
+* Kotlin has two types of constructs for defining inline functions, lambdas and anonymous functions https://kotlinlang.org/docs/reference/lambdas.html#lambda-expressions-and-anonymous-functions
+* In Kotlin you can actually do an return from lambda, so that it does not return from the outer function, like breaking from for loop for example https://kotlinlang.org/docs/reference/returns.html#return-at-labels
+* Sadly in Kotlin you need parentheses to if statements, unlike in Swift, some discussion about it and developer response https://discuss.kotlinlang.org/t/feature-request-removing-unnecessary-parenthesis/1607/5
+* Kotlin does not have handy collection literals that Swift has, but you have initializers functions instead, like listOf(1, 2, 3) or mutableListOf(1, 2, 3) https://kotlinlang.org/docs/reference/collections.html
+* You can use operators when passing parameters to higher order functions like this Int::plus https://stackoverflow.com/questions/39469158/kotlin-passing-operator-as-a-function-parameter
