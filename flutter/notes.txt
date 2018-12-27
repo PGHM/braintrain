@@ -1,0 +1,13 @@
+Will be making an orienteering app that can help to verify in competitions
+whether the competitors have visited the right places by using QR codes and
+positioning. (Obviously not a really good way, but will make do for this to
+get use of some of the API:s in phones in Flutter)
+
+Very good place to start is the Flutter getting started and making the first
+app and then getting that going and checking the documentation for anything
+that you see and do not understand. Also these are really good to read
+through if you come from web / mobile development:
+
+https://flutter.io/docs/get-started/flutter-for/android-devs
+https://flutter.io/docs/get-started/flutter-for/ios-devs
+https://flutter.io/docs/get-started/flutter-for/web-devs
