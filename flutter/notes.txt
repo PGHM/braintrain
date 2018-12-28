@@ -11,3 +11,13 @@ through if you come from web / mobile development:
 https://flutter.io/docs/get-started/flutter-for/android-devs
 https://flutter.io/docs/get-started/flutter-for/ios-devs
 https://flutter.io/docs/get-started/flutter-for/web-devs
+
+Random notes:
+
+- final means that the object in variable cannot be reassigned
+- const keyword means that the object cannot be changed, but this keyword
+  appears also in constructors and when you are creating an object you must
+  still use the const keyword even when the constructor is marked constant to
+  create compile-time constant, you can omit it only in constant context for
+  example here "const foo = ConstantConstructor()" instead of doing "const foo
+  = const ConstantConstructor()"
