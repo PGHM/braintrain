@@ -12,6 +12,9 @@ https://flutter.io/docs/get-started/flutter-for/android-devs
 https://flutter.io/docs/get-started/flutter-for/ios-devs
 https://flutter.io/docs/get-started/flutter-for/web-devs
 
+Using Firebase as backend for this project, it was easy enough to setup with
+Flutter
+
 Random notes:
 
 - final means that the object in variable cannot be reassigned

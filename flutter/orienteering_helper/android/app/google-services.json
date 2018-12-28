@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "418201493374",
+    "firebase_url": "https://orienteering-helper.firebaseio.com",
+    "project_id": "orienteering-helper",
+    "storage_bucket": "orienteering-helper.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418201493374:android:6aa2e234f73d42f0",
+        "android_client_info": {
+          "package_name": "houston.brain.train.orienteeringhelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "418201493374-g7f69kto1r491fpimfad58k5o96fn303.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0wbIx6AS3HwgskOLRijAuawo3yJQnBW4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
