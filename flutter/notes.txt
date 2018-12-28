@@ -13,14 +13,19 @@ https://flutter.io/docs/get-started/flutter-for/ios-devs
 https://flutter.io/docs/get-started/flutter-for/web-devs
 
 Using Firebase as backend for this project, it was easy enough to setup with
-Flutter
+Flutter, no easy place to see the reference though, only found this:
+https://codelabs.developers.google.com/codelabs/flutter-firebase/#0
 
 Random notes:
 
 - final means that the object in variable cannot be reassigned
+
 - const keyword means that the object cannot be changed, but this keyword
   appears also in constructors and when you are creating an object you must
   still use the const keyword even when the constructor is marked constant to
   create compile-time constant, you can omit it only in constant context for
   example here "const foo = ConstantConstructor()" instead of doing "const foo
   = const ConstantConstructor()"
+
+- async and await are handy keywords when doing stuff with Futures, they are
+  syntastic sugar to do things in more concise way
