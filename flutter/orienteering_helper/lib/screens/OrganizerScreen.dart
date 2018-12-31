@@ -43,6 +43,39 @@ class _OrganizerScreenState extends State<OrganizerScreen> with AutomaticKeepAli
     }
   }
 
+  void _removeTrack(String trackName) async {
+    showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("Remove track '$trackName'"),
+          actions: <Widget>[
+            FlatButton(
+              child: Text('Yes'),
+              onPressed: () {
+                Firestore.instance
+                    .collection('tracks').reference()
+                    .where("name", isEqualTo: trackName)
+                    .getDocuments()
+                    .then((QuerySnapshot snapshot) {
+                  snapshot.documents.first.reference.delete();
+                  _getTracks();
+                  Navigator.of(context).pop();
+                });
+              },
+            ),
+            FlatButton(
+              child: Text('No'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,6 +86,7 @@ class _OrganizerScreenState extends State<OrganizerScreen> with AutomaticKeepAli
             return ListTile(
               leading: Icon(Icons.edit),
               title: Text(trackName),
+              onLongPress: () => _removeTrack(trackName),
             );
           }),
         ).toList(),
