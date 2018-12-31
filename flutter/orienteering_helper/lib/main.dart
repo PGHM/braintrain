@@ -21,7 +21,7 @@ class OrienteeringHelperApp extends StatelessWidget {
           appBar: AppBar(
             bottom: TabBar(
               tabs: [
-                Tab(icon: Icon(Icons.account_circle)),
+                Tab(icon: Icon(Icons.map)),
                 Tab(icon: Icon(Icons.add_location)),
               ],
             ),

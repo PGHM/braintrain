@@ -40,7 +40,15 @@ class _OrganizerScreenState extends State<OrganizerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        children: _tracks.map((username) => Text(username)).toList(),
+        children: ListTile.divideTiles(
+          context: context,
+          tiles: _tracks.map((trackName) {
+            return ListTile(
+              leading: Icon(Icons.edit),
+              title: Text(trackName),
+            );
+          }),
+        ).toList(),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _addTrack,

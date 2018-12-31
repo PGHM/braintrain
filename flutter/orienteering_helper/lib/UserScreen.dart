@@ -30,7 +30,15 @@ class _UserScreenState extends State<UserScreen> {
       onRefresh: _getTracks,
       child: ListView(
         physics: const AlwaysScrollableScrollPhysics(),
-        children: _tracks.map((username) => Text(username)).toList(),
+        children: ListTile.divideTiles(
+          context: context,
+          tiles: _tracks.map((trackName) {
+            return ListTile(
+              leading: Icon(Icons.linear_scale),
+              title: Text(trackName),
+            );
+          }),
+        ).toList(),
       ),
     );
   }
