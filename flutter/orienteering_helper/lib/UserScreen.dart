@@ -6,7 +6,11 @@ class UserScreen extends StatefulWidget {
   _UserScreenState createState() => _UserScreenState();
 }
 
-class _UserScreenState extends State<UserScreen> {
+class _UserScreenState extends State<UserScreen> with AutomaticKeepAliveClientMixin<UserScreen> {
+
+  @override
+  bool get wantKeepAlive => true;
+
   final _tracks = <String>[];
 
   @override

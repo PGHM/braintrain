@@ -7,7 +7,11 @@ class OrganizerScreen extends StatefulWidget {
   _OrganizerScreenState createState() => _OrganizerScreenState();
 }
 
-class _OrganizerScreenState extends State<OrganizerScreen> {
+class _OrganizerScreenState extends State<OrganizerScreen> with AutomaticKeepAliveClientMixin<OrganizerScreen> {
+
+  @override
+  bool get wantKeepAlive => true;
+
   final _tracks = <String>[];
 
   @override
