@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'AddTrackScreen.dart';
+import 'package:orienteering_helper/screens/AddTrackScreen.dart';
 
 class OrganizerScreen extends StatefulWidget {
   @override
@@ -8,7 +8,6 @@ class OrganizerScreen extends StatefulWidget {
 }
 
 class _OrganizerScreenState extends State<OrganizerScreen> with AutomaticKeepAliveClientMixin<OrganizerScreen> {
-
   @override
   bool get wantKeepAlive => true;
 
@@ -29,15 +28,19 @@ class _OrganizerScreenState extends State<OrganizerScreen> with AutomaticKeepAli
     });
   }
 
-  void _addTrack() {
-    Navigator.of(context).push(
-      new MaterialPageRoute<void>(
+  void _addTrack() async {
+    final result = await Navigator.of(context).push(
+      new MaterialPageRoute<bool>(
         fullscreenDialog: true,
         builder: (BuildContext context) {
           return AddTrackScreen();
         },
       ),
     );
+
+    if (result) {
+      _getTracks();
+    }
   }
 
   @override

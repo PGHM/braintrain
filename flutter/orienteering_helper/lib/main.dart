@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'UserScreen.dart';
-import 'OrganizerScreen.dart';
+import 'package:orienteering_helper/screens/UserScreen.dart';
+import 'package:orienteering_helper/screens/OrganizerScreen.dart';
 
 void main() => runApp(OrienteeringHelperApp());
 
