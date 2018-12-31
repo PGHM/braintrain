@@ -19,18 +19,30 @@ class _AddTrackScreenState extends State<AddTrackScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Orienteering Helper"),
+        title: Text("Add a new track"),
       ),
         body: Center(
             child: Column(
               children: <Widget>[
-                Text("Name of the track:"),
-                TextField(
-                  controller: trackNameController,
+                Padding(
+                  padding: EdgeInsets.only(top: 10),
+                  child: Text("Name:"),
                 ),
-                IconButton(
-                  icon: Icon(Icons.save),
-                  onPressed: _addTrack,
+                Padding(
+                  padding: EdgeInsets.only(top: 10, left: 10, right: 10),
+                  child: Container(
+                    child: TextField(
+                      controller: trackNameController,
+                    ),
+                    constraints: BoxConstraints.tightFor(width: 250),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(top: 10),
+                  child: RaisedButton(
+                    child: Text("Save"),
+                    onPressed: _addTrack,
+                  ),
                 ),
               ],
             )

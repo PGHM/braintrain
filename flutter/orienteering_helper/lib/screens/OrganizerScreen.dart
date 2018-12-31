@@ -48,7 +48,7 @@ class _OrganizerScreenState extends State<OrganizerScreen> with AutomaticKeepAli
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text("Remove track '$trackName'"),
+          title: Text("Remove track '$trackName'?"),
           actions: <Widget>[
             FlatButton(
               child: Text('Yes'),

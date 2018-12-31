@@ -29,3 +29,13 @@ Random notes:
 
 - async and await are handy keywords when doing stuff with Futures, they are
   syntastic sugar to do things in more concise way
+
+- Wtf this margin and spacing solution in Flutter, putting everything inside
+  container or padding seems horrible, cannot even put spacing on Rows or
+  Columns it seems O_o
+
+- Container with BoxConstraints is your friend when you want to actually
+  determine sizes for something but not explicit sizes
+
+- alt+enter on Widget brings possibility to wrap it in different things, very
+  useful for Paddings and Containers for example
