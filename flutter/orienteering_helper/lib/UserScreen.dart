@@ -17,7 +17,7 @@ class _UserScreenState extends State<UserScreen> {
     _getTracks();
   }
 
-  void _getTracks() async {
+  Future<void> _getTracks() async {
     final snapshot = await Firestore.instance.collection('tracks').getDocuments();
     setState(() {
       _users.clear();
@@ -32,8 +32,12 @@ class _UserScreenState extends State<UserScreen> {
       appBar: AppBar(
         title: Text("Orienteering Helper"),
       ),
-      body: ListView(
-        children: _users.map((username) => Text(username)).toList(),
+      body: RefreshIndicator(
+        onRefresh: _getTracks,
+        child: ListView(
+          physics: const AlwaysScrollableScrollPhysics(),
+          children: _users.map((username) => Text(username)).toList(),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _getTracks,
