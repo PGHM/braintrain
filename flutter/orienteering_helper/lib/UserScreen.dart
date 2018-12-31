@@ -28,20 +28,11 @@ class _UserScreenState extends State<UserScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Orienteering Helper"),
-      ),
-      body: RefreshIndicator(
-        onRefresh: _getTracks,
-        child: ListView(
-          physics: const AlwaysScrollableScrollPhysics(),
-          children: _users.map((username) => Text(username)).toList(),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _getTracks,
-        child: Icon(Icons.refresh),
+    return RefreshIndicator(
+      onRefresh: _getTracks,
+      child: ListView(
+        physics: const AlwaysScrollableScrollPhysics(),
+        children: _users.map((username) => Text(username)).toList(),
       ),
     );
   }
