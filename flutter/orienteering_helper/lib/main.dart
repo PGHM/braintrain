@@ -13,8 +13,7 @@ class OrienteeringHelperApp extends StatelessWidget {
         brightness: Brightness.dark,
         primarySwatch: Colors.red,
         primaryColor: Colors.red,
-        accentColor: Colors.redAccent,
-        accentIconTheme: IconThemeData(color: Colors.black),
+        accentColor: Colors.white,
       ),
       home: DefaultTabController(
         length: 2,
@@ -29,9 +28,10 @@ class OrienteeringHelperApp extends StatelessWidget {
             title: Text("Orienteering Helper"),
           ),
           body: TabBarView(
+            physics: const NeverScrollableScrollPhysics(),
             children: [
               UserScreen(),
-              UserScreen(),
+              OrganizerScreen(),
             ],
           ),
         ),

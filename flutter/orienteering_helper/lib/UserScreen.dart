@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'dart:async';
 
 class UserScreen extends StatefulWidget {
   @override
@@ -8,7 +7,7 @@ class UserScreen extends StatefulWidget {
 }
 
 class _UserScreenState extends State<UserScreen> {
-  final _users = <String>[];
+  final _tracks = <String>[];
 
   @override
   void initState() {
@@ -20,9 +19,8 @@ class _UserScreenState extends State<UserScreen> {
   Future<void> _getTracks() async {
     final snapshot = await Firestore.instance.collection('tracks').getDocuments();
     setState(() {
-      _users.clear();
-      _users.addAll(
-          snapshot.documents.map((document) => document.data['name']));
+      _tracks.clear();
+      _tracks.addAll(snapshot.documents.map((document) => document.data['name']));
     });
   }
 
@@ -32,7 +30,7 @@ class _UserScreenState extends State<UserScreen> {
       onRefresh: _getTracks,
       child: ListView(
         physics: const AlwaysScrollableScrollPhysics(),
-        children: _users.map((username) => Text(username)).toList(),
+        children: _tracks.map((username) => Text(username)).toList(),
       ),
     );
   }
