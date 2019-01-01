@@ -64,3 +64,7 @@ Random notes:
 
 - Autocomplete seems a little shady on Android Studio, but I guess there can
   be 3rd party packages for it
+
+- With all the Paddings and Containers the UI-trees get messy really quickly
+  so you have to be careful and wrap things in widgets often I guess, would
+  have to make a real project to see how messy they get
