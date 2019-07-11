@@ -1,0 +1,7 @@
+* Found out that Swift has feature called Raw Strings, very useful for regexes because you don't have to escape anything https://www.hackingwithswift.com/articles/162/how-to-use-raw-strings-in-swift
+* 'case let' is a syntax for pattern matching which kind of does not have anything to do with switch cases or enums but just uses the 'case' keyword, interesting https://mecid.github.io/2019/02/06/pattern-matching-with-case-let/
+* You can overload pattern matching operator =~ in Swift to get your own behaviour https://mecid.github.io/2019/03/20/pattern-matching-operator
+* Result type in Swift5, somehow missed this
+* Xcode debugger can do 'expression' which lets you actually execute commands when you are stuck on breakpoint https://medium.com/headout-engineering/advanced-debugging-with-xcode-9eba2845232a
+* In relation to the last article, you can also drag instruction pointer while debugging to skip code or move back, this of course can have nasty side effects
+* Good explanation of 'some' in Swift5, so opaque type is always only one concrete type of the protocol, not any, like it is without the 'some' keyword https://medium.com/@PhiJay/whats-this-some-in-swiftui-34e2c126d4c4
