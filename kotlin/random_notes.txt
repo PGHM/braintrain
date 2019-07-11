@@ -12,3 +12,10 @@
 * Sadly in Kotlin you need parentheses to if statements, unlike in Swift, some discussion about it and developer response https://discuss.kotlinlang.org/t/feature-request-removing-unnecessary-parenthesis/1607/5
 * Kotlin does not have handy collection literals that Swift has, but you have initializers functions instead, like listOf(1, 2, 3) or mutableListOf(1, 2, 3) https://kotlinlang.org/docs/reference/collections.html
 * You can use operators when passing parameters to higher order functions like this Int::plus https://stackoverflow.com/questions/39469158/kotlin-passing-operator-as-a-function-parameter
+
+More notes from another session:
+
+* Kotlin has much like Swifts new Property Observers Property Delegates, and there are some provided by stdlib: 'observable', 'vetoable' and 'notNull' https://americanexpress.io/advanced-kotlin-delegates/
+* Kotlin does not have static variables or functions like many other languages, but instead you can create 'companion object' and this object acts as a Singleton where you can access things "statically" as in other languages
+* There is a thing called Kotlin Multiplatform to share Kotlin code in many platform, such as iOS, so you can write business logic in one place, but seems that not UI, which then again could be done with for example Flutter! https://blog.kotlin-academy.com/flutter-and-kotlin-multiplatform-relationship-890616005f57
+* 'let' vs 'run' vs 'also' vs 'apply': They are scoping functions that have similar purposes, but little bit different return values and access to object via 'it' or without it. Basically you don't have to use them all and some are better then others in certain situations https://proandroiddev.com/the-tldr-on-kotlins-let-apply-also-with-and-run-functions-6253f06d152b
