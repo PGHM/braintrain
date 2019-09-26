@@ -16,3 +16,5 @@
 - Flutter has platform channels for implementing platform specific code and calling it https://blog.solutelabs.com/integrating-third-party-native-sdks-in-flutter-df418829dcf7
 - Seems that now they have native looking iOS widgets officially https://flutter.dev/docs/development/ui/widgets/cupertino
 - Seems that something called BLOC pattern is very popular when managing State in Flutter apps https://ayusch.com/understanding-bloc-architecture-in-flutter/
+
+- Article about how different multiplatform things work: https://www.donnfelker.com/flutter-just-might-work/
