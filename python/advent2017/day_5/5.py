@@ -1,5 +1,5 @@
-# Tried to do with recursion but python does not like it and crashes, so while
-# loop then instead
+# Tried to do with recursion but python does not like too much of it and
+# crashes, so while loop then instead
 
 code = [int(x.rstrip()) for x in open('input', 'r').readlines()]
 code_length = len(code)
