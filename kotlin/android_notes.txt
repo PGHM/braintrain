@@ -1,0 +1,13 @@
+* CoordinatorLayout was new to me, used for making transitions between childs or for example floating buttons on top of notifications like in the examples https://developer.android.com/reference/android/support/design/widget/CoordinatorLayout
+* SnackBar is the new Toast, should be used in most cases https://material.io/components/snackbars/
+* Have to be careful with some of Android core API:s as their are written in Java and don't always have nullability annotations, so they can have return type that in Kotlin could not have null but can still return null for example Menu.findItem()
+* FrameLayouts new child ViewAnimator can display multiple views in the frame one after another and display animation between them https://abhiandroid.com/ui/viewanimator
+* FrameLayout can be used to stack views on top of each other to achieve HUD like elements or floating elements
+* RecyclerView is kind of the same as CollectionView in iOS as it recycles the views as iOS reuses them, you just need new kind of adapter compared to ListView https://developer.android.com/guide/topics/ui/layout/recyclerview
+* RecyclerView needs a layoutmanager, much like CollectionView in iOS needs layout object, the standard ones are linear, grid and staggered grid. Linear is listlike, grid is static grid and staggered grid can present varying size objects in a grid https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html
+* You can declare things with annotation @VisibleForTesting to be able to unit test otherwise private things https://developer.android.com/reference/androidx/annotation/VisibleForTesting
+* A way to declare anonymous objects to for example pass listener objects to functions is to use 'object' notation https://kotlinlang.org/docs/reference/object-declarations.html
+* There is a new View called CardView which can easily make highlighted and rounded UI objects that stand out, it can help to make list items seem more separate for example https://guides.codepath.com/android/using-the-cardview
+* You can check Android code samples straight out of Android studio, just choose 'import sample' from the launch screen, too bad there are not that many Kotlin samples
+* It is all about fragments now, activities should only handle navigation it seems https://guides.codepath.com/android/creating-and-using-fragments
+* And as a sidenote, fragments really still seem to be very awkward to handle, init parameters for one thing and god afwul Parcelable (maybe there are good libraries to make this easier)

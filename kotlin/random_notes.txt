@@ -4,7 +4,7 @@
 * With Kotlin you can put primary constructor right into class declaration to be more concise and you can have multiple init blocks in addition to that and secondary constructors https://kotlinlang.org/docs/reference/classes.html
 * Like in Swift you can do class extension pretty easily, with even less the code that in Swift https://kotlinlang.org/docs/reference/extensions.html
 * Unlike Swift you can actually still have backing field to properties with custom setter or getter https://kotlinlang.org/docs/reference/properties.html#backing-fields
-* Eveyrthing in Kotlin is final by default, so if you want to allow overriding you have to specify it explicitly 
+* Everything in Kotlin is final by default, so if you want to allow overriding you have to specify it explicitly 
 * Notes about where and how to put constants in Kotlin, worth a read https://blog.egorand.me/where-do-i-put-my-constants-in-kotlin/
 * There is no ternary operators (there is the Elvis :? operator though) but you can use if-else on a single line https://kotlinlang.org/docs/reference/control-flow.html
 * Kotlin has two types of constructs for defining inline functions, lambdas and anonymous functions https://kotlinlang.org/docs/reference/lambdas.html#lambda-expressions-and-anonymous-functions
