@@ -1,0 +1,13 @@
+<resources>
+    <dimen name="app_margin">16dp</dimen>
+    <dimen name="cow_list_padding">10dp</dimen>
+
+    <dimen name="milk_mate_padding_horizontal">25dp</dimen>
+    <dimen name="milk_mate_height">75dp</dimen>
+    <dimen name="milk_mate_logo_size">50dp</dimen>
+
+    <dimen name="cow_info_logo_size">35dp</dimen>
+    <dimen name="cow_info_details_size">20dp</dimen>
+    <dimen name="cow_info_text_size">20sp</dimen>
+    <dimen name="cow_info_corner_radius">15dp</dimen>
+</resources>

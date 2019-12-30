@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/milk_mate_height"
+    android:background="@color/cowBlue"
+    android:paddingHorizontal="@dimen/milk_mate_padding_horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/milk_mate_description"
+            android:src="@drawable/ic_milkmate_logo" />
+
+        <ImageView
+            android:layout_width="@dimen/milk_mate_logo_size"
+            android:layout_height="@dimen/milk_mate_logo_size"
+            android:layout_gravity="start|center"
+            android:contentDescription="@string/cow_logo_description"
+            android:src="@drawable/ic_cow" />
+
+</FrameLayout>

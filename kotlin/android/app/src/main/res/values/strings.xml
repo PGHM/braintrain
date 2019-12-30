@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CowManager</string>
+    <string name="milk_mate_description">Milk Mate</string>
+    <string name="cow_logo_description">Cow head</string>
+    <string name="cow_info_details_description">Cow details</string>
+    <string name="cow_list_title">Cows</string>
+</resources>
