@@ -1,1 +1,1 @@
-Trying out Kotlin, following this course: https://www.udacity.com/course/kotlin-bootcamp-for-programmers--ud9011
+Trying out Kotlin, followed this course https://www.udacity.com/course/kotlin-bootcamp-for-programmers--ud9011 for a while but it turned out to be not that good. Kotlins documentation on the other hand was awesome, so I read that and made some own snippets using the language features and took some general notes.
