@@ -19,8 +19,9 @@ interface CowListListener {
 
 class CowListFragment : Fragment() {
     private lateinit var title: String
-    private lateinit var data: List<Cow>
+    private lateinit var data: ArrayList<Cow>
     private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: CowListAdapter
     private var listener: CowListListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,7 +42,8 @@ class CowListFragment : Fragment() {
     ): View? {
         recyclerView =
             inflater.inflate(R.layout.fragment_cow_list, container, false) as RecyclerView
-        recyclerView.adapter = CowListAdapter(recyclerView.context, data)
+        adapter = CowListAdapter(recyclerView.context, data)
+        recyclerView.adapter = adapter
 
         val padding = resources.getDimension(R.dimen.cow_list_padding).toInt()
         val decoration = MarginItemDecoration(padding)
@@ -63,6 +65,11 @@ class CowListFragment : Fragment() {
         listener = null
     }
 
+    fun addCow(cow: Cow) {
+        data.add(cow)
+        adapter.notifyDataSetChanged()
+    }
+
     companion object {
         fun newInstance(title: String, data: ArrayList<Cow>) =
             CowListFragment().apply {
@@ -81,7 +88,7 @@ private class MarginItemDecoration(private val spaceHeight: Int) : RecyclerView.
         parent: RecyclerView,
         state: RecyclerView.State
     ) {
-        with(outRect) {
+        outRect.apply {
             if (parent.getChildAdapterPosition(view) == 0) {
                 top = spaceHeight
             }

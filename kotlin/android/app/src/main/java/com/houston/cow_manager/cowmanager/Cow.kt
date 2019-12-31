@@ -12,7 +12,7 @@ data class Cow(val name: String, val type: Type, val color: Int) : Parcelable {
     }
 
     // Parcelable implementation
-    constructor(parcel: Parcel) : this(
+    constructor(parcel: Parcel): this(
         parcel.readString(),
         parcel.readSerializable() as Type,
         parcel.readInt()

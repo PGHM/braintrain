@@ -12,7 +12,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 
-class CowListAdapter(private val context: Context, private val data: List<Cow>)
+class CowListAdapter(private val context: Context, private val cows: ArrayList<Cow>)
     : RecyclerView.Adapter<CowListAdapter.CowViewHolder>() {
 
     class CowViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -37,8 +37,8 @@ class CowListAdapter(private val context: Context, private val data: List<Cow>)
             if (position % 2 == 0) context.getDrawable(R.drawable.cow_info_border)
             else context.getDrawable(R.drawable.cow_info_border_coloured)
 
-        holder.bind(data[position], background)
+        holder.bind(cows[position], background)
     }
 
-    override fun getItemCount() = data.size
+    override fun getItemCount() = cows.size
 }
