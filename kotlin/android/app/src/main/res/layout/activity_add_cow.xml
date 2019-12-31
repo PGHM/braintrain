@@ -1,8 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activities.AddCowActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <include layout="@layout/element_milk_mate_banner" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="@dimen/app_margin" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_app_margin"
+            android:fontFamily="sans-serif-light"
+            android:textSize="30sp"
+            android:textColor="@color/cowBlue"
+            android:text="@string/add_cow_title" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_app_margin"
+            android:fontFamily="sans-serif-black"
+            android:textSize="25sp"
+            android:textColor="@color/cowBlue"
+            android:text="@string/add_cow_name" />
+
+        <EditText
+            android:id="@+id/name_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/app_margin"
+            android:autofillHints=""
+            android:inputType="text"
+            android:hint="@string/add_cow_name_hint" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/app_margin"
+            android:fontFamily="sans-serif-black"
+            android:textSize="25sp"
+            android:textColor="@color/cowBlue"
+            android:text="@string/add_cow_type" />
+
+        <Spinner
+            android:id="@+id/type_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/app_margin" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/app_margin"
+            android:fontFamily="sans-serif-black"
+            android:textSize="25sp"
+            android:textColor="@color/cowBlue"
+            android:text="@string/add_cow_color" />
+
+        <Spinner
+            android:id="@+id/color_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/app_margin" />
+
+        <Button
+            android:id="@+id/save"
+            android:onClick="save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/app_margin"
+            android:padding="@dimen/app_margin"
+            android:fontFamily="sans-serif-black"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:backgroundTint="@color/cowLightBlue"
+            android:text="@string/add_cow_save" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -4,4 +4,17 @@
     <string name="cow_logo_description">Cow head</string>
     <string name="cow_info_details_description">Cow details</string>
     <string name="cow_list_title">Cows</string>
+    
+    <string name="add_cow_title">Add cow</string>
+    <string name="add_cow_name">Name:</string>
+    <string name="add_cow_name_hint">Mustikki</string>
+    <string name="add_cow_type">Type:</string>
+    <string name="add_cow_color">Color:</string>
+    <string name="add_cow_save">Save cow</string>
+
+    <string-array name="cow_color_choices">
+        <item>Red</item>
+        <item>Green</item>
+        <item>Black</item>
+    </string-array>
 </resources>

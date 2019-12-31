@@ -8,6 +8,8 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import kotlinx.android.synthetic.main.fragment_cow_list.view.*
 import java.lang.IllegalStateException
 
 private const val TITLE_KEY = "title"
@@ -40,8 +42,8 @@ class CowListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        recyclerView =
-            inflater.inflate(R.layout.fragment_cow_list, container, false) as RecyclerView
+        val view = inflater.inflate(R.layout.fragment_cow_list, container, false)
+        recyclerView = view.findViewById(R.id.recycler_view)
         adapter = CowListAdapter(recyclerView.context, data)
         recyclerView.adapter = adapter
 
@@ -49,7 +51,9 @@ class CowListFragment : Fragment() {
         val decoration = MarginItemDecoration(padding)
         recyclerView.addItemDecoration(decoration)
 
-        return recyclerView
+        view.findViewById<TextView>(R.id.title).text = title
+
+        return view
     }
 
     override fun onAttach(context: Context) {
@@ -68,6 +72,7 @@ class CowListFragment : Fragment() {
     fun addCow(cow: Cow) {
         data.add(cow)
         adapter.notifyDataSetChanged()
+        recyclerView.scrollToPosition(data.size - 1)
     }
 
     companion object {
@@ -92,8 +97,6 @@ private class MarginItemDecoration(private val spaceHeight: Int) : RecyclerView.
             if (parent.getChildAdapterPosition(view) == 0) {
                 top = spaceHeight
             }
-            left =  spaceHeight
-            right = spaceHeight
             bottom = spaceHeight
         }
     }

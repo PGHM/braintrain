@@ -21,20 +21,10 @@ class MainActivity : AppCompatActivity(), CowListListener {
 
         if (savedInstanceState != null) return
 
-        val cows = arrayListOf(
-            Cow("Mansikki", Cow.Type.HEREFORD, getColor(R.color.cowGreen)),
-            Cow("Mustikki", Cow.Type.ANGUS, getColor(R.color.cowRed)),
-            Cow("Helmikki", Cow.Type.MUSTIKKI, getColor(R.color.cowRed)),
-            Cow("Ansikki", Cow.Type.ANGUS, getColor(R.color.cowRed)),
-            Cow("Julmettu", Cow.Type.MUSTIKKI, getColor(R.color.cowGreen)),
-            Cow("Vimmattu", Cow.Type.ANGUS, getColor(R.color.cowGreen)),
-            Cow("Kammattu", Cow.Type.MUSTIKKI, getColor(R.color.cowRed)),
-            Cow("Rasvattu", Cow.Type.ANGUS, getColor(R.color.cowGreen)),
-            Cow("Kuningas", Cow.Type.HEREFORD, getColor(R.color.cowRed)),
-            Cow("Kuningatar", Cow.Type.HEREFORD, getColor(R.color.cowGreen))
+        val cowList = CowListFragment.newInstance(
+            getString(R.string.cow_list_title),
+            ArrayList()
         )
-
-        val cowList = CowListFragment.newInstance(getString(R.string.cow_list_title), cows)
         supportFragmentManager.beginTransaction().add(R.id.cow_list_container, cowList).commit()
 
         add_button.setOnClickListener {

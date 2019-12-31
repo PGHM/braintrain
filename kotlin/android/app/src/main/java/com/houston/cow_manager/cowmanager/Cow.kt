@@ -2,13 +2,29 @@ package com.houston.cow_manager.cowmanager
 
 import android.os.Parcel
 import android.os.Parcelable
+import java.lang.IllegalArgumentException
+import java.util.*
 
 data class Cow(val name: String, val type: Type, val color: Int) : Parcelable {
 
     enum class Type {
         HEREFORD,
         ANGUS,
-        MUSTIKKI
+        MUSTIKKI;
+
+        override fun toString(): String {
+            return super.toString().toLowerCase(Locale.getDefault()).capitalize()
+        }
+
+        companion object {
+            fun fromString(value: String): Cow.Type? {
+                try {
+                    return valueOf(value.toUpperCase(Locale.getDefault()))
+                } catch (e: IllegalArgumentException) {
+                    return null
+                }
+            }
+        }
     }
 
     // Parcelable implementation

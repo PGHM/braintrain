@@ -11,3 +11,5 @@
 * You can check Android code samples straight out of Android studio, just choose 'import sample' from the launch screen, too bad there are not that many Kotlin samples
 * It is all about fragments now, activities should only handle navigation it seems https://guides.codepath.com/android/creating-and-using-fragments
 * And as a sidenote, fragments really still seem to be very awkward to handle, init parameters for one thing and god afwul Parcelable (maybe there are good libraries to make this easier)
+* There is possibility to turn autoformatting off when moving files (surprisingly annoying) Preferences -> Editor -> Code Style -> Formatter Control. From there it can be done with either enabling the formatter toggling comments or adding patterns to disable formatting in files.
+* Spinner is the class for picking values from a set, Picker is for dates and times https://developer.android.com/guide/topics/ui/controls/spinner

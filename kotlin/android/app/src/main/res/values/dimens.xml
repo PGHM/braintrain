@@ -1,5 +1,6 @@
 <resources>
     <dimen name="app_margin">16dp</dimen>
+    <dimen name="small_app_margin">10dp</dimen>
     <dimen name="cow_list_padding">10dp</dimen>
 
     <dimen name="milk_mate_padding_horizontal">25dp</dimen>
