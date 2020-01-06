@@ -51,7 +51,7 @@ def apply_instruction(registers, program, execution_position):
         execution_position += 1
         result = Result(instruction.type, None) if register_value != 0 else None
     elif instruction.type == 'conditional_jump':
-        execution_position_offset = parameter if register_value != 0 else 1
+        execution_position_offset = parameter if register_value > 0 else 1
         execution_position += execution_position_offset
 
     return (registers, execution_position, result)
@@ -75,5 +75,3 @@ while 0 <= execution_position < len(program):
             break
 
 print("The last frequency was {}".format(last_frequency))
-
-#TODO: Part 2
