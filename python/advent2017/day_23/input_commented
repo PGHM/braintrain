@@ -1,0 +1,50 @@
+# Initialization, c seems to be upper bound that b goes towards
+set b 57        # b == 57
+set c b         # c == 57
+jnz a 2         # if a is set to != 0, make b and c much bigger
+    jnz 1 5
+mul b 100        
+sub b -100000   # b == 105700
+set c b         
+sub c -17000    # c == 122700
+
+# Main loop
+# Reset f, f getting put to 0 means this is not a prime number
+set f 1
+set d 2
+set e 2
+
+# Calculation loop
+
+# Multiply e with d and check if it equals b, so check if b is not a prime
+set g d
+mul g e
+sub g b
+jnz g 2
+    set f 0
+
+# Loop e 2 -> b
+sub e -1
+set g e
+sub g b
+jnz g -8 # Go to start of calculation loop
+
+# Loop d 2 -> b
+sub d -1
+set g d
+sub g b
+jnz g -13 # Go to start of calculation loop
+
+# If we found that b is not a prime, increment our result
+jnz f 2
+    sub h -1
+
+# If b == c we exit
+set g b
+sub g c
+jnz g 2
+    jnz 1 3 # Exit
+
+# Increment b and go to start of main loop
+sub b -17
+jnz 1 -23
