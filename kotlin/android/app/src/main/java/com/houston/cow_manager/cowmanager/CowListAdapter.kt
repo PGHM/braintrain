@@ -33,9 +33,11 @@ class CowListAdapter(private val context: Context, private val cows: ArrayList<C
     }
 
     override fun onBindViewHolder(holder: CowViewHolder, position: Int) {
-        val background =
-            if (position % 2 == 0) context.getDrawable(R.drawable.cow_info_border)
-            else context.getDrawable(R.drawable.cow_info_border_coloured)
+        val background = if (position % 2 == 0) {
+            context.getDrawable(R.drawable.cow_info_border)
+        } else {
+            context.getDrawable(R.drawable.cow_info_border_coloured)
+        }
 
         holder.bind(cows[position], background)
     }
