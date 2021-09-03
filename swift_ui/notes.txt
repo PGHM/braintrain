@@ -1,0 +1,19 @@
+- https://developer.apple.com/tutorials/swiftui Apple has some tutorials here, they look pretty yanky, but have most of the stuff covered (urgh, why everything has to be animated and scroll around)
+
+- Something that the introductions mentioned often was Combine (https://developer.apple.com/documentation/combine), a new framework to enable reactive programming. Not directly related to SwiftUI, but something that works well with it I guess
+- 'some' keyword and Opaque Types are important part of SwiftUI
+  - https://docs.swift.org/swift-book/LanguageGuide/OpaqueTypes.html Swift documentation about this is quite good now, it wasn't when it was launched but it has matured nicely
+  - Basically it explains that opaque types try to improve on protocol types so you can use them in a more flexible way, because they preserve the concrete type that conforms to the protocol.
+  - When opaque type is returned from function it must always be one concrete type, a difference to when returning just a protocol type. Compiler can infer what this concrete type is.
+  - The question is then why wouldn't you just return the concrete type to begin with? Maybe the caller does not really need to know the concrete type, just that it conforms to the protocol. It avoids exposing internal logic to the outside of the interface.
+  - For SwiftUI it makes it possible to nest calls with opaque type as return value, because the concrete types are preserved
+- When creating a pure SwiftUI app, no more AppDelegate needed for the simple case at least, but you define your entry point to the app by defining struct that conforms to App and designate it with @main
+- WindowGroup https://developer.apple.com/documentation/swiftui/windowgroupis the root object of the Scene, to make it possible for opening multiple windows in the platforms that support it, for apps mainly IpadOS
+- In the SwiftUI Canvas you can cmd click things (or ctrl + cmd) to open editor, which has things like interface builder embed in and open inspector (annoying that right click/ctrl click does nothing...)
+- Nice thing about SwiftUI is that the code that generates the UI is readable, like in Android, and nothing is only available in the Canvas like in interface builder
+- Basic building blocks are the HStack and VStack and you can use special element called Spacer to make extra space inside them between the other elements in the stacks
+- You can use Group elements to group elements without affecting the layout. Then you can apply modifiers to the groups and they will affect all of the groups elements. Things like HStack and VStack act like groups too.
+- SwiftUI has "technical limitation" of 10 childs on any element, so if you go over that you have to Group them up, fun times!
+- No more rounding corners with borderRadius, "clipShape" to the rescue!
+
+- TODO: continue with @State/@Binding, what are they and how they work
