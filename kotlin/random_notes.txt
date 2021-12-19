@@ -27,3 +27,13 @@ More notes from another session:
 * Story about adapting Kotlin multiplatform from March 2019 (and failing to do so) https://quickbirdstudios.com/blog/is-kotlin-native-production-ready/ 
 * Kotlin has answer for callback hells with coroutines, which seem like a nicer way than Promises to handle making code that looks logical and can be async https://www.youtube.com/watch?v=_hfBv0a09Jc
 * Nice to way to replicate Swift's 'guard' statement is to the elvis operator: 'nullableVar ?: return'. Kotlin actually has little bit more intelligent compiler in the way it remembers if variable has been checked for null for the rest of the scope is variable is not mutable
+
+Even more notes:
+
+* Kotlin format strings look like this "Length of the once decompressed input is ${decompressedLength(input,true, 0)}" https://kotlinlang.org/docs/basic-syntax.html#string-templates
+* Kotlin has + operation for at least Lists, probably other types too
+* Kotlin has pretty powerful smart cast system, so if you check that something is certain type or null, the compiler remembers it in the scope https://kotlinlang.org/docs/typecasts.html#smart-casts
+* You can capture subject of 'when' statement to be used inside the conditions, but you cannot do this in 'if' like in Swift 'if let' https://kotlinlang.org/docs/control-flow.html#when-expression
+* Kotlin is similar to Swift, but I had some troubles converting from 'guard let' and 'if let' to Kotlins scope functions, but they are nice too with Smart Cast
+* In Kotlin you can make computed property by defining the variable as 'val' and only provigin getter. This is confusing if you are coming from Swift, as there they are mutable, as they kind of are https://kotlinlang.org/docs/properties.html#getters-and-setters
+* You can define compile time constants with 'const' keyword https://kotlinlang.org/docs/properties.html#compile-time-constants 
