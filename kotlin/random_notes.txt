@@ -39,3 +39,7 @@ Even more notes:
 * You can define compile time constants with 'const' keyword https://kotlinlang.org/docs/properties.html#compile-time-constants
 * Kotlin also has raw strings '""".*\d\w"""' where you can insert special characters without escaping them, handy for regexstrings for example https://kotlinlang.org/docs/basic-types.html#string-literals
 * Kotlins regexes are nice, they have especially nice feature when using capture groups, you can call MatchGroup.destructured to assign them like thisval (foo, bar, baz) = match.destructured to assign all the captured parts https://www.baeldung.com/kotlin/regular-expressions
+* Even though default function calls and class initializers do not have labels before arguments, you can name them like in Python https://kotlinlang.org/docs/functions.html#named-arguments
+* You can provide default parameter values as in Swift https://kotlinlang.org/docs/functions.html#default-arguments
+* In Kotlin you cannot refer to enums or class members like '.enumValue' like in Swift, but you can do 'import Enum.*' and after that you can use them without the prefix, this is probably going to change in future version https://blog.jetbrains.com/kotlin/2021/06/kotlin-features-survey-edition-2/#unqualified-enum 
+* In addition to the 'let', 'run', 'apply' etc there is 'takeIf/takeUnless' which let you embed conditions in the call chains, which is handy https://kotlinlang.org/docs/scope-functions.html#takeif-and-takeunless
