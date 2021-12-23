@@ -36,4 +36,6 @@ Even more notes:
 * You can capture subject of 'when' statement to be used inside the conditions, but you cannot do this in 'if' like in Swift 'if let' https://kotlinlang.org/docs/control-flow.html#when-expression
 * Kotlin is similar to Swift, but I had some troubles converting from 'guard let' and 'if let' to Kotlins scope functions, but they are nice too with Smart Cast
 * In Kotlin you can make computed property by defining the variable as 'val' and only provigin getter. This is confusing if you are coming from Swift, as there they are mutable, as they kind of are https://kotlinlang.org/docs/properties.html#getters-and-setters
-* You can define compile time constants with 'const' keyword https://kotlinlang.org/docs/properties.html#compile-time-constants 
+* You can define compile time constants with 'const' keyword https://kotlinlang.org/docs/properties.html#compile-time-constants
+* Kotlin also has raw strings '""".*\d\w"""' where you can insert special characters without escaping them, handy for regexstrings for example https://kotlinlang.org/docs/basic-types.html#string-literals
+* Kotlins regexes are nice, they have especially nice feature when using capture groups, you can call MatchGroup.destructured to assign them like thisval (foo, bar, baz) = match.destructured to assign all the captured parts https://www.baeldung.com/kotlin/regular-expressions

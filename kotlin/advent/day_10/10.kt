@@ -21,6 +21,12 @@ sealed class Node {
     abstract fun addValue(value: Int, graph: MutableMap<NodeID, Node>)
 }
 
+data class Output( override val nodeID: NodeID, var value: Int?) : Node() {
+    override fun addValue(value: Int, graph: MutableMap<NodeID, Node>) {
+        this.value = value
+    }
+}
+
 data class Bot(
     override val nodeID: NodeID,
     var values: List<Int>,
@@ -56,16 +62,13 @@ data class Bot(
     }
 }
 
-data class Output( override val nodeID: NodeID, var value: Int?) : Node() {
-    override fun addValue(value: Int, graph: MutableMap<NodeID, Node>) {
-        this.value = value
-    }
-}
-
 fun main() {
     val input = File("day_10/input.txt").readLines().sorted()
     val graph = parseInput(input, HashMap())
-    val //TODO: find outputs 1 2 and 3 and clean the code up, ended up being a funny and nice solution and learning experience
+    val output0Value = (graph[NodeID(0, NodeType.OUTPUT)] as Output).value!!
+    val output1Value = (graph[NodeID(1, NodeType.OUTPUT)] as Output).value!!
+    val output2Value = (graph[NodeID(2, NodeType.OUTPUT)] as Output).value!!
+    println("Values from outputs 0, 1, 2 multiplied are ${output0Value * output1Value * output2Value}")
 }
 
 tailrec fun parseInput(input: List<String>, currentGraph: MutableMap<NodeID, Node>): MutableMap<NodeID, Node> {
@@ -87,7 +90,7 @@ fun updateGraphFromInstruction(instruction: String, graph: MutableMap<NodeID, No
 
     valueRegex.matchEntire(instruction)?.let {
         val (value, targetBotID) = it.destructured
-        val targetNode = graph[NodeID(targetBotID.toInt(), NodeType.BOT)]!!
+        val targetNode = graph[NodeID(targetBotID.toInt(), NodeType.BOT)] ?: return
         targetNode.addValue(value.toInt(), graph)
     }
 }
