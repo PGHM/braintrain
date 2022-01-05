@@ -1,0 +1,28 @@
+[
+    {
+        "title":"Historiallinen Hitler-vertaus sopii nyt paremmin kuin koskaan, sanoo virolainen asian­tuntija Venäjän vaatimuksista – Suomi on jäämässä EU:n puolustus­kysymysten kanssa yksin",
+        "ingress": "Viron turvallisuuspolitiikan tutkimuskeskuksen johtajan Kristi Raikin mukaan Suomi pääsisi halutessaan Naton jäseneksi.",
+        "category": "Ulkomaat",
+        "imageURL": "https://hs.mediadelivery.fi/img/300/67cf38a5b0af5a7e6c1b3a7d7e9e7d09.jpg",
+        "imageType": "rectangle",
+        "paywalled": false,
+        "date": 1641356700000
+    },
+    {
+        "title":"Lumesta tulee nopeasti ruskeaa mössöä Helsingissä, eikä asiantuntijoilla ole yhtä selkeää selitystä näylle",
+        "ingress": "Lumi likaantuu helposti pääkaupunkiseudun teillä. Raskaalla liikenteellä saattaa olla enemmän vaikutusta likaantumiseen kuin henkilöautoilla.",
+        "category": "Helsinki",
+        "imageURL": "https://hs.mediadelivery.fi/img/300/da08d271135ba9f7d86dde326757fe94.jpg",
+        "imageType": "roundedRectangle",
+        "paywalled": true,
+        "date": 1641368340000
+    },
+    {
+        "title":"Tapio Tarvas odotti kotiin vauvaansa mutta näki tämän seuraavan kerran 8-vuotiaana – Japanissa lapsen yhteyden katkaisu toiseen vanhempaan on yleistä",
+        "category": "Japani",
+        "imageURL": "https://hs.mediadelivery.fi/img/300/ed738b6013b26be897785451dda54eb9.jpg",
+        "imageType": "circle",
+        "paywalled": true,
+        "date": 1641358620000
+    }
+]

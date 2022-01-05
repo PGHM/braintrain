@@ -7,6 +7,7 @@
   - When opaque type is returned from function it must always be one concrete type, a difference to when returning just a protocol type. Compiler can infer what this concrete type is.
   - The question is then why wouldn't you just return the concrete type to begin with? Maybe the caller does not really need to know the concrete type, just that it conforms to the protocol. It avoids exposing internal logic to the outside of the interface.
   - For SwiftUI it makes it possible to nest calls with opaque type as return value, because the concrete types are preserved
+
 - When creating a pure SwiftUI app, no more AppDelegate needed for the simple case at least, but you define your entry point to the app by defining struct that conforms to App and designate it with @main
 - WindowGroup https://developer.apple.com/documentation/swiftui/windowgroupis the root object of the Scene, to make it possible for opening multiple windows in the platforms that support it, for apps mainly IpadOS
 - In the SwiftUI Canvas you can cmd click things (or ctrl + cmd) to open editor, which has things like interface builder embed in and open inspector (annoying that right click/ctrl click does nothing...)
@@ -14,6 +15,19 @@
 - Basic building blocks are the HStack and VStack and you can use special element called Spacer to make extra space inside them between the other elements in the stacks
 - You can use Group elements to group elements without affecting the layout. Then you can apply modifiers to the groups and they will affect all of the groups elements. Things like HStack and VStack act like groups too.
 - SwiftUI has "technical limitation" of 10 childs on any element, so if you go over that you have to Group them up, fun times!
-- No more rounding corners with borderRadius, "clipShape" to the rescue!
+- No more rounding corners with borderRadius, "clipShape" to the rescue! You can put any shape into it, Circle or RoundedRectangle for example
+- All the margins between elements are done with Spacer() or padding(EdgeInsets), takes some getting used to, as you cannot define constraints between elements anymore
+- Background color is no longer a special feature, now all types of backgrounds can be set with background(), colors are also Views, so background just sets a view to the background of the specific View
+- View is just a protocol in SwiftUI, not a class, so anything can be a View, it just has to provide a body (which is some View, magic of the opaque types)
 
-- TODO: continue with @State/@Binding, what are they and how they work
+- Important part of SwiftUI is the preview, you can get it by making a struct that conforms to PreviewProvider, usually named ClassName_Previews
+  - You can then show anything there, usually at least the View in question.
+  - You can also show multiple views in any arragnment, as the preview has all the possibilities of SwiftUI itself.
+  - It also has some special cababilities, you can set the view to have dark mode, use certain localization or device type and size. This makes it easy to compare the view in different situations quickly.
+
+- Sizing in SwiftUI is done with frame, it has more flexibility than UIKit frame, as you don't have to provide all the values, and you can provide min/max values for both width and height, and they can even be .infinity. So no traditional frame, but hints to the system what the frame would ideally be.
+- Without frame, everything has it's own intrinsic sizing, for example Images try to be the same size as the source and Stacks try to fit their content
+- offset is handy tool to offset views contents without changing the original position of the view. For example you can layout something in a Stack but change it's vertical or horizontal position to what you like with the offset
+- @ViewBuilder property wrapper let's you do what View body does (it has the same wrapper, it is just hidden on the implementations because it is defined in the protocol). So you can make helper functions or variables that return some View and have the same syntax https://www.swiftbysundell.com/tips/adding-swiftui-viewbuilder-to-functions/
+
+- I almost got excited about it, until I made just a little bit more complicated view and had to restart Xcode several times before the view could be previewed again and was not stuck. Also seems that things work if you do them exactly as wanted, but again in true Apple style, you might find yourself doing things that were not expected. It feels much like React Native in a way that you can make beautiful things fast, as long as they can look like the default view and use default paddings and default everything.
