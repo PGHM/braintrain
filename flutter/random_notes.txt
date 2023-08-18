@@ -18,3 +18,5 @@
 - Seems that something called BLOC pattern is very popular when managing State in Flutter apps https://ayusch.com/understanding-bloc-architecture-in-flutter/
 
 - Article about how different multiplatform things work: https://www.donnfelker.com/flutter-just-might-work/
+
+- https://dart.dev/guides/language/coming-from/swift-to-dart Dart comparison to Swift, written by Dart developers
