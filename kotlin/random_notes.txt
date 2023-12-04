@@ -43,3 +43,7 @@ Even more notes:
 * You can provide default parameter values as in Swift https://kotlinlang.org/docs/functions.html#default-arguments
 * In Kotlin you cannot refer to enums or class members like '.enumValue' like in Swift, but you can do 'import Enum.*' and after that you can use them without the prefix, this is probably going to change in future version https://blog.jetbrains.com/kotlin/2021/06/kotlin-features-survey-edition-2/#unqualified-enum 
 * In addition to the 'let', 'run', 'apply' etc there is 'takeIf/takeUnless' which let you embed conditions in the call chains, which is handy https://kotlinlang.org/docs/scope-functions.html#takeif-and-takeunless
+
+Now from Sanoma, more notes:
+
+* More from Kotlin coroutines, you can use 'coroutineScope' to bundle coroutines to be executed at same scope and only continue when all 'Job's are finished or you can cancel all the things in scope manually or when the Scope dies, like a lifecycle scope in Android. Also if you do multiple things in scope concurrently and one crashes the whole scope is canceled automatically https://www.youtube.com/watch?v=Wpco6IK1hmY
