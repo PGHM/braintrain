@@ -1,0 +1,50 @@
+Hey, I am learning AI and trying to see how well AI can solve coding puzzles. Here is coding puzzle for you. The input should be read from a file that is formatted like the example is.
+
+<First puzzle text copied directly>
+
+There is another part to this puzzle. Same instructions apply as to the first part.
+
+<Second puzzle text copied directly>
+
+I ran the code and the result was 53886 but this is too low according to the validator, are you sure of the code?
+
+Can you make a code that just runs with the example data and prints out all the calibration values?
+
+The example code revealed a problem, for line "eightwothree" the result should be 83 and not 23. And for line "xtwone3four" the result should be 24 and not 14.
+
+This did not help. For example line "two1nine" returns 11 instead of 29, which was correct in previous iteration of the code. Line "eightwothree" is not printed at all.
+
+This code produces the exact same output as the last code:
+
+Calibration value for line "two1nine": 11
+Calibration value for line "abcone2threexyz": 22
+Calibration value for line "xtwone3four": 33
+Calibration value for line "4nineeightseven2": 42
+Calibration value for line "zoneight234": 24
+Calibration value for line "7pqrstsixteen": 77
+Total sum of calibration values: 209
+
+Which is wrong
+
+<Three iterations of wrong code>
+
+This still provides the wrong output. Your code tries to split the lines with words = line.split(). There is no whitespace in the inputs so this does not work. You have to go through the lines in some other way.
+
+This provides the following output:
+
+Calibration value for line "two1nine": 29
+Calibration value for line "eightwothree": 88
+Calibration value for line "abcone2threexyz": 22
+Calibration value for line "xtwone3four": 33
+Calibration value for line "4nineeightseven2": 42
+Calibration value for line "zoneight234": 24
+Calibration value for line "7pqrstsixteen": 77
+Total sum of calibration values: 315
+
+Total sum is wrong and many line are wrong
+
+This output is still wrong. Please pay attention to the second row. The input "eightwothree" is parsed as 88 but in reality is 83. Pay attention to the end, there is clearly word "three" at the end and that is the last digit"
+
+The output is still identical to the previous one and wrong. "eightwothree" still produces 88.
+
+This still does not work. Notice that keeping the whole text in the "word" variable does not match the last word "three" in the example I have given the last few lines. In this case you have something like "wothree" in the word and that does not match. But there is "three" in the end still.

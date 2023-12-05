@@ -1,0 +1,21 @@
+This is a challenge where I try to solve all the 2023 Advent of Code puzzles
+purely with AI solving them for me without writing any code. This may sound
+like an easy task, but we'll see how good the AI is at solving these kind of
+perfect information puzzles. The AI used is Bing Chat Enterprise.
+
+First I'll just give the instructions directly as they are in the site and ask
+it to write code that'll take the input from a local text file. AI cannot run
+code so I'll run the code for it.
+
+If the answer is wrong I'll point out the response from the Advent of Code
+validator, it usually says that the answer is too high or too low.
+
+If this does not help I'll point out some specific inputs or calculations that
+are wrong. These are easy to provide from the simple example that each
+assignment has. The point is that I don't reference anything in the actual
+code that the AI writes, just the inputs and outputs.
+
+If this does not work the first part of the experiment fails, but I'll
+continue by pointing out what part of the code does not work. This will be
+repeated until it gets the code right or I'll run out of patience / prompt
+skills.

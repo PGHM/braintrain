@@ -1,0 +1,29 @@
+Day 1:
+
+The first part of the first day's puzzle is usually very easy and so it is
+this year also. AI has no problem generating the code and solving this. Strong
+start.
+
+The next part proves to be more difficult though. Special cases like two digit
+words being together (twone having "two" and "one" both) prove problematic.
+Pointing out that the answer is too low does not help, but pointing out
+specific inputs that are wrong help a little, it goes to the right direction
+but has profound flaw of trying to separate the input by white space to
+separate words. There are no white spaces in the input. This happens for few
+iterations and then I give up, it cannot solve the task alone.
+
+Every iteration of the code runs nicely every time, no run time errors and the
+AI seems to handle cases where there are no digits or digit words in the input
+gracefully, pretty good. First the code is pretty clean, but when the
+iterations start the AI mostly adds more conditions and more loops and the
+code quickly becomes very unreadable. But it was not part of this challenge so
+won't try to make it more readable by asking the AI to make it more readable.
+
+I did not specify the language that I want to use and it automatically used
+Python. From my experience it is the most used language in Advent of Code
+solving, don't know if this had anything to do with the choice or if Python
+just is the default coding language for the AI.
+
+In the end I had to help three times until it got the code right. The code
+went to the right direction every time, but slowly. Let's see how the next day
+goes, I was surprised how difficult this first day proved to be.
