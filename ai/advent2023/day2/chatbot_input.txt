@@ -1,0 +1,12 @@
+Hey, I am learning AI and trying to see how well AI can solve coding puzzles. Here is coding puzzle for you. The input should be read from a file that is formatted like the example is. The filename is "puzzle_input.txt".
+
+That worked. Here is part two of the puzzle. Same instructions apply for the input.
+
+This code produces a runtime error, problem is:
+
+Traceback (most recent call last):
+  File "/Users/jpaivinen/braintrain/ai/advent2023/day2/part2.py", line 27, in <module>
+    print(solve_puzzle())
+  File "/Users/jpaivinen/braintrain/ai/advent2023/day2/part2.py", line 14, in solve_puzzle
+    red = max(int(cube.split(' ')[0]) for cube in cubes if 'red' in cube)
+ValueError: max() arg is an empty sequence

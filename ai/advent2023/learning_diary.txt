@@ -27,3 +27,57 @@ just is the default coding language for the AI.
 In the end I had to help three times until it got the code right. The code
 went to the right direction every time, but slowly. Let's see how the next day
 goes, I was surprised how difficult this first day proved to be.
+
+Took me like an hour to do this with the AI, definitely longer than just
+coding it by myself.
+
+Day 2:
+
+Now I knew how the inputs worked and had my setup ready so starting to do the
+tasks did not take long. Part 1 went flawlessly and part 2 produced the first
+runtime error but when I just let the AI know that this kind of error occured
+it fixed it and the next iteration worked. This went pretty well.
+
+The code was again pretty obnoxious to read, but I learned something new from
+Python, you can use sum(x ** 2 for x in range(1, 6)) directly so that don't
+need to first generate list with list comprehension or other means, just need
+the generator expression.
+
+This took 10 minutes or so.
+
+Day 3:
+
+Wow, things started getting difficult here. It took me 27 responses to get
+this one correct with the AI and the limit is 30. The difficulty with the
+first part was that the AI could not handle multidigit numbers properly. It
+did ackknowledge that there is a possibility of multidigit numbers but it just
+summed the single digits together. I could not make this work without helping
+with just the input/output so failure again.
+
+It required a lot of instructions to get the AI to treat the numbers as a
+whole and then some more to make it not treat subparts of the number as new
+number. At this point I noticed that when you are 15+ requests deep making the
+code was getting way slower, probably because of the backlog and increasing
+context.
+
+Final problem was actually not the AI's fault, but in the actual input there
+was more different kind of symbols than in the example. Even I would have made
+that mistake probably. I guess the instructions did say any symbol. Anyway
+after I pointed that out everything worked.
+
+I did figure out a new way of not helping the bot too much. If you ask it to
+add debug instructions to certain points and then offer that output as a help
+it did manage to fix some problems, or partly fix them, with just that help.
+
+Also encountered first infinite loop!
+
+Part 2 was actually easier this time, it had similar kind of things and the
+only problem here was that the AI could not handle the numbers starting from
+the last digit, so I had to help directly and say that you have to check
+backwards too. After that it was easy times.
+
+Reading the code in this whole exercise got pretty hard, the code is just
+loops and ifs and the AI does not like to use any helper functions. Maybe it
+would if I would instruct it to, but not by itself.
+
+Took well over an hour for this one.

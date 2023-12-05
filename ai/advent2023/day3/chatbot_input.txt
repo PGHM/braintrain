@@ -1,0 +1,81 @@
+Hey, I am learning AI and trying to see how well AI can solve coding puzzles. Here is coding puzzle for you. The input should be read from a file that is formatted like the example is. The filename is "puzzle_input.txt".
+
+That's not the right answer; your answer is too low.
+
+This is still not correct, the output is 20, which is even lower than the previous one
+
+(repeated and same result)
+
+Using the example input it produces 0 as output. The correct output for the example is 436.
+
+Your code has a problem. It does not correctly handle multidigit numbers. When number has multiple digits it means the number is higher than the sum of all those digits.
+
+I mean you should take the multidigit number as a whole and not inspect the digits one by one
+
+This does not work, it still produces 0 as output when it should produce 436. You must not "Sum all the digits of the multi-digit number", it does not work like that. When you find a digit, you should find the whole number and not treat it as single separate digits. Then you should check if the whole number has any symbols near it.
+
+This does not work. The code for checking if there is a symbol nearby does not work correctly. Calculating the numbers works in correct way now.
+
+The code produces output of 6751. The problem is that you add the num to the total for each digit, you should add it only once.
+
+This produces output of:
+
+Adding 467 to total
+Adding 67 to total
+Adding 7 to total
+Adding 35 to total
+Adding 5 to total
+Adding 633 to total
+Adding 33 to total
+Adding 617 to total
+Adding 17 to total
+Adding 7 to total
+Adding 592 to total
+Adding 92 to total
+Adding 2 to total
+Adding 755 to total
+Adding 664 to total
+Adding 64 to total
+Adding 4 to total
+Adding 598 to total
+Adding 98 to total
+
+Can you see the problem there?
+
+This does not work, I think you are not correctly skip the numbers.
+
+(some debugging requests)
+
+Actually you can encounter any kind of symbol, not just the once you have listed.
+
+Here is part two of the coding puzzle.
+
+That did not work, if you use the example input the result is 0
+
+The output was:
+
+Adding 5 to part numbers
+Adding 7 to part numbers
+Adding 35 to part numbers
+Adding 7 to part numbers
+Adding 598 to part numbers
+Adding 755 to part numbers
+Adding 98 to part numbers
+
+Can you see the problem?
+
+This code produces an infinite loop
+
+The output is:
+
+Adding 5 to part numbers
+Adding 7 to part numbers
+Adding 35 to part numbers
+Adding 7 to part numbers
+Adding 598 to part numbers
+Adding 755 to part numbers
+Adding 98 to part numbers
+
+The problem of adding too many part numbers is still there
+
+The problem is that currently there are numbers like 5 and 7 that are not the full number. The problem is that in this case you should also check backwards if there is more digits to the number
